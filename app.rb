@@ -6,7 +6,7 @@ require 'pry'
 class Api < Sinatra::Base
 
     set :db, 'postgres://javi:@localhost:5432/loyal_guru?tablename='
-    set :path '/Users/javi/code/api-pgloader/tmp/'
+    set :path, '/Users/javi/code/api-pgloader/tmp/'
 
     get '/api' do
       'This api is working mate!'
