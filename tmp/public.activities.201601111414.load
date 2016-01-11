@@ -1,0 +1,14 @@
+LOAD CSV
+FROM '/Users/javi/Downloads/tessssssssst.txt'
+HAVING FIELDS
+(
+id,code,barcode,session,created_at,day_week,location_id,profile_id,customer_id,total,company_id
+)
+INTO postgres://javi:@localhost:5432/loyal_guru?tablename=public.activities
+TARGET COLUMNS
+(
+id,code,barcode,session,created_at,day_week,location_id,profile_id,customer_id,total,company_id
+)
+WITH fields terminated by ';',
+skip header = 1
+;

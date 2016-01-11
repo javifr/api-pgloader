@@ -1,0 +1,6 @@
+2016-01-11T15:14:15.127000Z LOG Main logs in '/private/tmp/pgloader/pgloader.log'
+2016-01-11T15:14:15.152000Z LOG Data errors in '/private/tmp/pgloader/'
+2016-01-11T15:14:15.153000Z LOG Parsing commands from file #P"/Users/javi/code/api-pgloader/tmp/public.activities.201601111414.load"
+An unhandled error condition has been signalled:
+   File does not exists: '/Users/javi/Downloads/tessssssssst.txt'.
+

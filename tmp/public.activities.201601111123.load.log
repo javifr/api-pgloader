@@ -1,0 +1,52 @@
+2016-01-11T15:11:24.155000Z LOG Main logs in '/private/tmp/pgloader/pgloader.log'
+2016-01-11T15:11:24.162000Z LOG Data errors in '/private/tmp/pgloader/'
+2016-01-11T15:11:24.162000Z LOG Parsing commands from file #P"/Users/javi/code/api-pgloader/tmp/public.activities.201601111123.load"
+                    table name       read   imported     errors            time
+------------------------------  ---------  ---------  ---------  --------------
+                         fetch          0          0          0          0.018s
+------------------------------  ---------  ---------  ---------  --------------
+             public.activities         14          0         14          0.092s
+------------------------------  ---------  ---------  ---------  --------------
+             Total import time         14          0         14          0.110s
+2016-01-11T15:11:24.367000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(702020130) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(888030134) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(1020068) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(1010054) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(2040229) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(3160289) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(4100100) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(3100063) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(1030172) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(4110159) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(1310030) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.368000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(2150215) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.369000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(2010130) already exists.
+CONTEXT: COPY activities, line 1
+2016-01-11T15:11:24.369000Z ERROR Database error 23505: duplicate key value violates unique constraint "activities_pkey"
+DETAIL: Key (id)=(1040125) already exists.
+CONTEXT: COPY activities, line 1
