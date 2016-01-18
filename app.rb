@@ -4,7 +4,7 @@ require 'sinatra/json'
 require 'pry'
 
 class Api < Sinatra::Base
-
+    
     set :db, 'postgres://javi:@localhost:5432/loyal_guru?tablename='
     set :path, '/Users/javi/code/api-pgloader/tmp/'
 
@@ -24,9 +24,11 @@ class Api < Sinatra::Base
       db_connect = "#{settings.db}#{company}.#{table}"
       filename = "#{company}.#{table}.#{Time.now.strftime("%Y%m%d%M%S")}.load"
 
+      file_csv = `curl -o ./tmp/#{filename}.csv "#{url}"`
+
       # Creating load file
       contents = "LOAD CSV\n"+
-         "FROM '#{url}'\n"+
+         "FROM './#{filename}.csv'\n"+
               "HAVING FIELDS\n"+
               "(\n"+
                "#{fields}\n"+
@@ -48,6 +50,8 @@ class Api < Sinatra::Base
       # Calling pgloader file.load
       ret = `pgloader #{settings.path+filename}`
 
+      remove_file = `rm tmp/#{filename}.csv`
+
       # Managing response
       if $?.success?
         # Write success log file
@@ -59,7 +63,7 @@ class Api < Sinatra::Base
           ret = ret.split("Total import time")
           ret = ret[1].gsub(/\s+/, ' ').split(" ")
           # status 200 response with json content
-          json :read => ret[0], :imported => ret[1], :erros => ret[2]
+          json :read => ret[0], :imported => ret[1], :errors => ret[2]
         end
 
       else
